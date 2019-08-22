@@ -2,13 +2,37 @@
   "ReRoutes": [
     {
       "DownstreamPathTemplate": "/demo/{url}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "UpstreamPathTemplate": "/demo/{url}",
       "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
       "DownstreamHostAndPorts": [
         {
-          "Host": "172.17.0.1",
-          "Port": 5000
+          "Host": "localhost",
+          "Port": 5001
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/sso/{url}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/sso/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8801
+        }
+      ]
+    },
+    {
+      "DownstreamPathTemplate": "/common/{url}",
+      "DownstreamScheme": "https",
+      "UpstreamPathTemplate": "/common/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8802
         }
       ]
     }

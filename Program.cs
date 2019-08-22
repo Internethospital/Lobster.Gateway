@@ -17,18 +17,6 @@ namespace Lobster.Gateway
             BuildWebHost(args).Run();
         }
 
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args, IConfiguration config) =>
-        //    WebHost.CreateDefaultBuilder(args)
-        //    .UseKestrel()
-        //    .ConfigureAppConfiguration(conbuilder =>
-        //    {
-        //        conbuilder.AddJsonFile("appsettings.json");
-        //        conbuilder.AddJsonFile("configuration.json");//加载网关配置文件
-        //    })
-        //    .UseUrls(config["server.urls"])
-        //    .UseStartup<Startup>();
-
-
         public static IWebHost BuildWebHost(string[] args) =>
           WebHost.CreateDefaultBuilder(args)
              .UseKestrel()
